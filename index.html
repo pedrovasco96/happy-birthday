@@ -3,139 +3,489 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feliz Aniversário ❤️</title>
+
+<title>Gift Selection Portal</title>
 
 <style>
+
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#ff6b9d,#ff8fb3);
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#f2f3f5;
+    color:#333;
+}
+
+.header{
+    background:linear-gradient(135deg,#1b1464,#6a11cb);
     color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.header h1{
+    margin:0;
+    font-size:3rem;
+}
+
+.header p{
+    max-width:900px;
+    margin:auto;
+    margin-top:20px;
+    line-height:1.6;
+}
+
+.badges{
+    margin-top:25px;
+}
+
+.badge{
+    display:inline-block;
+    background:white;
+    color:#333;
+    padding:8px 14px;
+    border-radius:20px;
+    margin:5px;
+    font-size:14px;
 }
 
 .container{
-    max-width:1000px;
+    max-width:1200px;
     margin:auto;
     padding:40px 20px;
 }
 
-h1{
-    text-align:center;
-    font-size:3rem;
-}
-
-.subtitle{
-    text-align:center;
-    font-size:1.2rem;
-    margin-bottom:40px;
-}
-
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
 }
 
 .card{
     background:white;
-    color:#333;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
     transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
+}
+
+.card-header{
+    background:#6a11cb;
+    color:white;
+    padding:18px;
+}
+
+.card-content{
+    padding:22px;
 }
 
 .card h2{
-    margin-top:0;
+    margin:0;
+}
+
+ul{
+    padding-left:20px;
 }
 
 .btn{
     display:inline-block;
     margin-top:15px;
-    background:#ff4f87;
+    background:#6a11cb;
     color:white;
-    padding:10px 20px;
-    border-radius:8px;
     text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
     font-weight:bold;
 }
 
-.footer{
-    text-align:center;
-    margin-top:50px;
-    font-size:1.1rem;
+.priority{
+    display:inline-block;
+    padding:6px 10px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:bold;
+    margin-top:10px;
 }
+
+.p1{
+    background:#ffdddd;
+    color:#a10000;
+}
+
+.p2{
+    background:#fff3cc;
+    color:#8a6d00;
+}
+
+.p3{
+    background:#dff7dd;
+    color:#006d2c;
+}
+
+.section{
+    margin-top:50px;
+}
+
+.section-box{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.footer{
+    margin-top:50px;
+    background:#1f2937;
+    color:white;
+    padding:40px;
+}
+
+.footer pre{
+    white-space:pre-wrap;
+    font-family:Consolas,monospace;
+}
+
+.small{
+    font-size:12px;
+    opacity:0.8;
+}
+
+.love{
+    text-align:center;
+    font-size:20px;
+    margin-top:30px;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="header">
 
-<h1>🎉 Feliz Aniversário ❤️</h1>
+<h1>🎉 Gift Selection Portal 🎉</h1>
 
-<p class="subtitle">
-Após um rigoroso processo de seleção, estas são as finalistas para a tua prenda deste ano 😘
+<h3>Version 1.0.0</h3>
+
+<p>
+Após uma extensa fase de levantamento de requisitos, 3 reuniões de alinhamento,
+0 documentos funcionais aprovados e inúmeras sessões de análise de negócio,
+foi desenvolvida esta plataforma para permitir à utilizadora selecionar a sua prenda de aniversário.
 </p>
+
+<div class="badges">
+<span class="badge">✅ Production Ready</span>
+<span class="badge">✅ Mobile Friendly</span>
+<span class="badge">✅ Pedro Approved</span>
+<span class="badge">⚠️ Not OutSystems Certified</span>
+</div>
+
+<p class="small">
+Powered by OutSystems™*<br>
+*O programador não sabe utilizar OutSystems.
+</p>
+
+</div>
+
+<div class="container">
 
 <div class="grid">
 
+<!-- PNEUS -->
+
 <div class="card">
+<div class="card-header">
 <h2>🚴 Pneus Gravel</h2>
-<p>Para novas aventuras e muitos quilómetros juntos.</p>
+</div>
+
+<div class="card-content">
+
+<strong>Projeto:</strong> Gravel Safety Enhancement Program
+
+<p>
+Foi identificado que a utilizadora utiliza atualmente uma bicicleta de montanha
+em ambiente de estrada.
+</p>
+
+<p>
+A análise de campo concluiu que ainda existem alguns momentos de emoção não planeada.
+</p>
+
+<ul>
+<li>Mais aderência</li>
+<li>Mais segurança</li>
+<li>Mais confiança</li>
+<li>Menos ataques cardíacos ao acompanhante</li>
+</ul>
+
+<span class="priority p3">ROI Muito Elevado</span>
+
+<br>
+
 <a class="btn"
 href="https://www.decathlon.pt/p/pneu-de-bicicleta-gravel-talao-flexivel-terreno-dry-700x38-preto/X8894973/c1m8894973"
 target="_blank">
-Ver Presente
+View Solution
 </a>
+
+</div>
 </div>
 
+<!-- CAPACETE -->
+
 <div class="card">
+<div class="card-header">
 <h2>⛑️ Capacete de Bike</h2>
-<p>Segurança, conforto e muito estilo.</p>
+</div>
+
+<div class="card-content">
+
+<strong>Projeto:</strong> Head Protection Recovery Initiative
+
+<p>
+Durante uma auditoria aos ativos de ciclismo foi identificado que um dos capacetes desapareceu.
+</p>
+
+<p>
+As investigações continuam sem suspeitos.
+</p>
+
+<ul>
+<li>Duas cabeças protegidas</li>
+<li>Zero discussões sobre quem usa o capacete</li>
+<li>Melhor conformidade com boas práticas</li>
+</ul>
+
+<span class="priority p1">P1 CRITICAL</span>
+
+<br>
+
 <a class="btn"
 href="https://www.decathlon.pt/p/capacete-de-btt-expl-100-branco/323802/c227m8578498"
 target="_blank">
-Ver Presente
+View Solution
 </a>
+
+</div>
 </div>
 
+<!-- CALÇAS -->
+
 <div class="card">
+<div class="card-header">
 <h2>👖 Calças de Bike</h2>
-<p>Conforto premium para os dias mais frios.</p>
+</div>
+
+<div class="card-content">
+
+<strong>Projeto:</strong> Thermal Comfort Modernization
+
+<p>
+A solução atual consiste na utilização de leggings por baixo dos calções.
+</p>
+
+<p>
+Embora funcional, a arquitetura não é considerada ideal.
+</p>
+
+<ul>
+<li>Mais conforto</li>
+<li>Menos camadas</li>
+<li>Mais elegância velocipédica</li>
+<li>Menos engenharia improvisada</li>
+</ul>
+
+<span class="priority p3">Recommended</span>
+
+<br>
+
 <a class="btn"
 href="https://www.decathlon.pt/p/calcas-justas-sem-alcas-de-ciclismo-de-estrada-inverno-mulher-discover-preto/302293/c1m8504330"
 target="_blank">
-Ver Presente
+View Solution
 </a>
+
+</div>
 </div>
 
-<div class="card">
-<h2>🚗 Pack Aulas de Condução</h2>
-<p>Um presente que dura muito para além do aniversário.</p>
-</div>
+<!-- CONDUÇÃO -->
 
 <div class="card">
+<div class="card-header">
+<h2>🚗 Aulas de Condução</h2>
+</div>
+
+<div class="card-content">
+
+<strong>Projeto:</strong> Return To Driver Program
+
+<p>
+A carta foi obtida com sucesso há aproximadamente 4 anos.
+</p>
+
+<p>
+A utilização posterior foi considerada estatisticamente residual.
+</p>
+
+<ul>
+<li>Recuperação de confiança</li>
+<li>Melhoria da condução</li>
+<li>Integração avançada com rotundas</li>
+<li>Estacionamentos sem stakeholders</li>
+</ul>
+
+<span class="priority p3">High Business Value</span>
+
+</div>
+</div>
+
+<!-- BRACELETE -->
+
+<div class="card">
+<div class="card-header">
 <h2>⌚ Bracelete para Relógio</h2>
-<p>Para dar uma nova vida ao relógio.</p>
+</div>
+
+<div class="card-content">
+
+<strong>Projeto:</strong> Smartwatch Infrastructure Renewal
+
+<p>
+A bracelete anterior concluiu o seu ciclo de vida.
+</p>
+
+<p>
+O relógio encontra-se operacional mas estruturalmente vulnerável.
+</p>
+
+<ul>
+<li>Relógio funcional</li>
+<li>Menos risco de queda</li>
+<li>Mais estilo</li>
+</ul>
+
+<span class="priority p2">P2 Important</span>
+
+<br>
+
 <a class="btn"
 href="https://www.amazon.es/-/pt/dp/B0DXZNNZKF/"
 target="_blank">
-Ver Presente
+View Solution
 </a>
+
+</div>
+</div>
+
+<!-- ROUPA -->
+
+<div class="card">
+<div class="card-header">
+<2>
+</div>
+
+<div class="card-content">
+
+<strong>Requisitos recolhidos:</strong>
+
+<p>"Preciso de roupa."</p>
+
+<p>"Não tenho nada para vestir."</p>
+
+<p>"Tenho mesmo de comprar roupa."</p>
+
+<p>
+Após vários meses de recolha de requisitos,
+foi validado que existe uma necessidade legítima.
+</p>
+
+<ul>
+<li>Springfield</li>
+<li>Zara</li>
+<li>Menos crises de guarda-roupa</li>
+<li>Maior felicidade da utilizadora</li>
+</ul>
+
+<span class="priority p3">Top Pick</span>
+
+<br>
+
+<a class="btn"
+href="https://myspringfield.com/pt/pt"
+target="_blank">
+Springfield
+</a>
+
+<a class="btn"
+href="https://www.zara.com/pt/"
+target="_blank">
+Zara
+</a>
+
+</div>
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-box">
+
+<h2>📋 Justificação de Negócio</h2>
+
+<p>
+Todas as propostas apresentadas foram sujeitas a rigorosa análise financeira,
+funcional e emocional.
+</p>
+
+<p>
+O comité executivo concluiu que qualquer uma das opções apresenta elevado potencial de satisfação da utilizadora.
+</p>
+
+<p>
+A seleção final encontra-se pendente de aprovação da principal stakeholder.
+</p>
+
+</div>
+
 </div>
 
 </div>
 
 <div class="footer">
-❤️ Independentemente da vencedora, a melhor escolhampo ❤️
-<br><br>
-Com amor,<br>
-Pedro
+
+<pre>
+Release Notes v1.0.0
+
+Features:
+- Adicionado módulo de seleção de prendas
+- Adicionado Clothing Modernization Program
+- Implementada integração com felicidade
+- Corrigido bug "Pedro não faz ideia do que oferecer"
+
+Known Issues:
+- O programador não sabe OutSystems
+- Possível excesso de lamechice em ambiente produtivo
+- Não foram realizados testes de carga
+
+Powered by OutSystems™
+
+Developed by:
+Pedro Vasco Consulting Services™
+
+© 2026
+</pre>
+
+<div class="love">
+❤️ Independentemente da opção escolhida,
+a melhor decisão da minha vida continua a ser tu. ❤️
 </div>
 
 </div>
