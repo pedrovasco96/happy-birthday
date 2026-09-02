@@ -194,6 +194,39 @@
       padding-top: 8px;
     }
 
+    .choice{
+      margin-top:15px;
+      padding:10px;
+      background:#f7f0ff;
+      border-radius:8px;
+      font-weight:600;
+    }
+    
+    .choice input{
+      transform:scale(1.3);
+      margin-right:10px;
+    }
+    
+    .submit-section{
+      margin-top:40px;
+      text-align:center;
+    }
+    
+    .submit-btn{
+      background:#16a34a;
+      color:white;
+      border:none;
+      padding:16px 28px;
+      border-radius:10px;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+    
+    .submit-btn:hover{
+      background:#15803d;
+    }
+
     .btn {
       display: inline-block;
       margin: 10px 7px 0 0;
@@ -377,7 +410,13 @@
             <li>Mais confiança</li>
             <li>Menos sustos para o acompanhante</li>
           </ul>
-
+          
+          <div class="choice">
+            <label>
+              <input type="checkbox" id="pneus">
+              Aprovar solução
+            </label>
+          </div>
           <div class="actions">
             <a class="btn"
                href="https://www.decathlon.pt/p/pneu-de-bicicleta-gravel-talao-flexivel-terreno-dry-700x38-preto/X8894973/c1m8894973"
@@ -413,6 +452,12 @@
             <li>Melhor conformidade com boas práticas</li>
           </ul>
 
+          <div class="choice">
+            <label>
+              <input type="checkbox" id="capacete">
+              Aprovar solução
+            </label>
+          </div>
           <div class="actions">
             <a class="btn"
                href="https://www.decathlon.pt/p/capacete-de-btt-expl-100-branco/323802/c227m8578498"
@@ -449,6 +494,12 @@
             <li>Menos engenharia improvisada</li>
           </ul>
 
+          <div class="choice">
+            <label>
+              <input type="checkbox" id="calcas">
+              Aprovar solução
+            </label>
+          </div>
           <div class="actions">
             <a class="btn"
                href="https://www.decathlon.pt/p/calcas-justas-sem-alcas-de-ciclismo-de-estrada-inverno-mulher-discover-preto/302293/c1m8504330"
@@ -485,6 +536,12 @@
             <li>Estacionamentos sem stakeholders nem impacto noutros veículos</li>
           </ul>
 
+          <div class="choice">
+            <label>
+              <input type="checkbox" id="conducao">
+              Aprovar solução
+            </label>
+          </div>
           <div class="actions">
             <span class="small">Solução offline. Fornecedor a selecionar após aprovação funcional.</span>
           </div>
@@ -515,6 +572,12 @@
             <li>Reposição de serviço com impacto imediato</li>
           </ul>
 
+          <div class="choice">
+            <label>
+              <input type="checkbox" id="bracelete">
+              Aprovar solução
+            </label>
+          </div>
           <div class="actions">
             <a class="btn"
                href="https://www.amazon.es/-/pt/dp/B0DXZNNZKF/"
@@ -555,6 +618,12 @@
             <li>Roupa para substituir a que continua no armário, mas já não conta</li>
           </ul>
 
+          <div class="choice">
+            <label>
+              <input type="checkbox" id="roupa">
+              Aprovar solução
+            </label>
+          </div>
           <div class="actions">
             <a class="btn"
                href="https://myspringfield.com/pt/pt"
@@ -595,6 +664,20 @@
         </p>
       </div>
     </section>
+    <div class="submit-section">
+
+      <h2>✅ Aprovação da Stakeholder</h2>
+      
+      <p>
+        Após análise das soluções apresentadas,
+        solicita-se a aprovação formal das opções selecionadas.
+      </p>
+      
+      <button class="submit-btn" onclick="submitChoices()">
+        Aprovar Soluções Selecionadas
+      </button>
+      
+      </div>
   </main>
 
   <footer class="footer">
@@ -633,5 +716,48 @@ Pedro Vasco Consulting Services™
       </div>
     </div>
   </footer>
+  <script>
+    function submitChoices() {
+    
+      let escolhidos = [];
+    
+      if(document.getElementById('pneus').checked)
+        escolhidos.push("🚴 Pneus Gravel");
+    
+      if(document.getElementById('capacete').checked)
+        escolhidos.push("⛑️ Capacete de Bike");
+    
+      if(document.getElementById('calcas').checked)
+        escolhidos.push("👖 Calças de Bike");
+    
+      if(document.getElementById('conducao').checked)
+        escolhidos.push("🚗 Pack de Aulas de Condução");
+    
+      if(document.getElementById('bracelete').checked)
+        escolhidos.push("⌚ Bracelete para Relógio");
+    
+      if(document.getElementById('roupa').checked)
+        escolhidos.push("👗 Wardrobe Transformation Initiative");
+    
+      if(escolhidos.length === 0){
+        alert("Nenhuma solução foi selecionada.");
+        return;
+      }
+    
+      const assunto =
+        "Aprovação de Presentes - Ambiente Produção";
+    
+      const corpo =
+        "Após análise funcional das soluções propostas, foram aprovadas as seguintes opções:\n\n" +
+        escolhidos.join("\n") +
+        "\n\nCumprimentos,\nPrincipal Stakeholder";
+    
+      window.location.href =
+        "mailto:pedro.vasco1996@gmail.com?subject=" +
+        encodeURIComponent(assunto) +
+        "&body=" +
+        encodeURIComponent(corpo);
+    }
+    </script>
 </body>
 </html>
